@@ -2,7 +2,6 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Read image
 img = cv2.imread("Image.jpg", 0)
 
 # Step 1: Gaussian Blur

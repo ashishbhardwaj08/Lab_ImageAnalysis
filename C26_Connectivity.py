@@ -5,7 +5,7 @@ import numpy as np
 img = cv2.imread("Image5.png", 0)
 
 # Threshold to ensure binary
-_, binary = cv2.threshold(img, 110, 255, cv2.THRESH_BINARY)
+_, binary = cv2.threshold(img, 120, 255, cv2.THRESH_BINARY)
 
 # Connected components
 num_labels, labels = cv2.connectedComponents(binary, connectivity=8)

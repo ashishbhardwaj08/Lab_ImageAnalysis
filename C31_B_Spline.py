@@ -3,9 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.interpolate import splprep, splev
 
-# -------------------------------
 # MAIN
-# -------------------------------
 if __name__ == "__main__":
     
     # Read image
