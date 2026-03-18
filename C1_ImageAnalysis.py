@@ -16,6 +16,7 @@ print("img shape:", original.shape)
 img = cv2.resize(original, (640,427))
 
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+_, binary = cv2.threshold(gray, 127, 255, cv2.THRESH_BINARY)
 
 rotated = cv2.rotate(img,cv2.ROTATE_90_CLOCKWISE)
 
@@ -33,7 +34,7 @@ edges = cv2.Canny(img, 100, 200)
 
 
 cropped = img[250:750, 250:500]
-cv2.imwrite("Template.jpg",cropped)
+# cv2.imwrite("Template.jpg",cropped)
 
 
 flipped = cv2.flip(img, 0)# 1- Horizontal, 0 - Vertical
@@ -112,6 +113,8 @@ merged = cv2.merge([b, g, zero])
 #cv2.imshow("Merged",merged)
 
 cv2.imshow("File",gray)
+cv2.imshow("File2",binary)
+
 
 
 
