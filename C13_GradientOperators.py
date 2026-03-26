@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Read image as grayscale (0)
-img = cv2.imread('Image.png', 0)
+img = cv2.imread('Image5.png', 0)
 # cv2.imshow("Original", img)
 
 

@@ -1,10 +1,13 @@
+#Cant understand yet
+
+
 import cv2
 import numpy as np
 from skimage.feature import local_binary_pattern
 from sklearn.cluster import KMeans
 import matplotlib.pyplot as plt
 
-img = cv2.imread("texture.jpg", 0)
+img = cv2.imread("Image4.png", 0)
 
 radius = 1
 n_points = 8 * radius

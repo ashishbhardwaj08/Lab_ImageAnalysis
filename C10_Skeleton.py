@@ -1,11 +1,14 @@
 # -- NOT WORKING CORRECTLY--#
 
 
+#-- Use Method in C11 --#
+
+
 #Using distance transform
 import cv2
 import numpy as np
 
-img = cv2.imread("Image5.png", 0)
+img = cv2.imread("Image.png", 0)
 
 #Invert
 # original = cv2.imread("Image.png", 0)

@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 from matplotlib import pyplot as plt
 
-original = cv2.imread("Image.jpg")
+original = cv2.imread("Image5.png")
 
 
 print("img shape:", original.shape)
@@ -14,16 +14,12 @@ print("img shape:", original.shape)
 
 
 img = cv2.resize(original, (640,427))
-
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-_, binary = cv2.threshold(gray, 127, 255, cv2.THRESH_BINARY)
+_, binary = cv2.threshold(gray, 127,255, cv2.THRESH_BINARY)
 
 rotated = cv2.rotate(img,cv2.ROTATE_90_CLOCKWISE)
-
 avg_blur = cv2.blur(img, (15,15))
-
 gauss_blur = cv2.GaussianBlur(img, (5,5), 0)
-
 median_blur = cv2.medianBlur(img, 5)
 
 
@@ -95,7 +91,6 @@ plt.show()'''
 normalized = cv2.normalize(img, None, 0, 255, cv2.NORM_MINMAX)
 
 zoom_in = cv2.resize(img, None, fx=2, fy=2)
-
 zoom_out = cv2.resize(img, None, fx=0.5, fy=0.5)
 
 
@@ -105,6 +100,7 @@ b, g, r = cv2.split(img)
 cv2.imshow("Green Channel", g)
 cv2.imshow("Red Channel", r)
 """
+
 zero = np.zeros_like(b)
 
 merged = cv2.merge([b, g, zero])
@@ -119,6 +115,5 @@ cv2.imshow("File2",binary)
 
 
 cv2.waitKey(0)
-
 # cv2.imwrite("Binary.jpg", gray)
 cv2.destroyAllWindows()

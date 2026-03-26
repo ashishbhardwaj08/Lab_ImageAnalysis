@@ -1,4 +1,4 @@
-# This file:
+# This code:
 
 # Extracts contour
 # Computes chain code

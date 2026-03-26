@@ -1,9 +1,13 @@
+#Cant understand yet
+
+
+
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
 
-img = cv2.imread("texture.jpg", 0)
+img = cv2.imread("Image2.jpg", 0)
 
 # Create Gabor kernel
 kernel = cv2.getGaborKernel((21, 21),

@@ -8,6 +8,7 @@ kernel = np.ones((5,5), np.uint8)
 gray_dilate = cv2.dilate(img, kernel)
 
 cv2.imshow("Original", img)
+cv2.waitKey(0)
 
 
 cv2.imshow("Grayscale Dilation", gray_dilate)

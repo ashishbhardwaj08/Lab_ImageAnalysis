@@ -5,9 +5,7 @@ import matplotlib.pyplot as plt
 # Read image in grayscale
 img = cv2.imread("Image.jpg", 0)
 
-# ==============================
-# 🔹 KIRSCH OPERATOR
-# ==============================
+# KIRSCH OPERATOR
 
 kirsch_masks = [
     np.array([[5,5,5],[-3,0,-3],[-3,-3,-3]]),      # N
@@ -30,9 +28,9 @@ kirsch_edge = np.max(np.stack(kirsch_responses), axis=0)
 kirsch_edge = np.uint8(np.clip(kirsch_edge, 0, 255))
 
 
-# ==============================
-# 🔹 ROBINSON OPERATOR
-# ==============================
+
+# ROBINSON OPERATOR
+
 
 robinson_masks = [
     np.array([[-1,0,1],[-2,0,2],[-1,0,1]]),   # E
@@ -55,9 +53,9 @@ robinson_edge = np.max(np.stack(robinson_responses), axis=0)
 robinson_edge = np.uint8(np.clip(robinson_edge, 0, 255))
 
 
-# ==============================
-# 🔹 DISPLAY OUTPUTS
-# ==============================
+
+# DISPLAY OUTPUTS
+
 
 plt.figure(figsize=(12,5))
 

@@ -7,7 +7,6 @@ _, binary = cv2.threshold(img, 127, 255, cv2.THRESH_BINARY)
 # Convert to 0/1
 binary = binary // 255
 
-# Define structuring elements
 B1 = np.array([[0,1,0],
                [0,1,0],
                [0,0,0]], dtype=np.uint8)

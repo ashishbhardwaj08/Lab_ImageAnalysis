@@ -1,3 +1,5 @@
+#Cant understand yet
+
 import cv2
 import numpy as np
 from skimage.feature import graycomatrix, graycoprops
@@ -5,7 +7,7 @@ from sklearn.cluster import KMeans
 import matplotlib.pyplot as plt
 
 # Read image
-img = cv2.imread("texture.jpg", 0)
+img = cv2.imread("Image.jpg", 0)
 
 # Quantize image (reduce gray levels)
 img_q = (img / 16).astype(np.uint8)

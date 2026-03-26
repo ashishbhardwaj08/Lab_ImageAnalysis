@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Read grayscale image
-img = cv2.imread("Image.jpg", 0)
+img = cv2.imread("Image5.png", 0)
 
 # -------- Using OpenCV Built-in Laplacian --------
 laplacian = cv2.Laplacian(img, cv2.CV_64F)
