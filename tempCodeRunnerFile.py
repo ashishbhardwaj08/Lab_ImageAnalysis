@@ -1,1 +1,2 @@
-NOT WORKING CORRECTLY.  JUST FOR MATHEMATICAL IDEA
+if cv2.waitKey(1) & 0xFF == 27:
+        break
