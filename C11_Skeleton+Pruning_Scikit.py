@@ -3,7 +3,7 @@ import numpy as np
 from skimage.morphology import skeletonize, remove_small_objects
 import matplotlib.pyplot as plt
 
-# Read and Convert to Binary
+
 image = cv2.imread("Image.png", 0)   # grayscale
 _, binary = cv2.threshold(image, 127, 255, cv2.THRESH_BINARY)
 

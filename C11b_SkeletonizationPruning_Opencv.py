@@ -2,17 +2,15 @@ import cv2
 import numpy as np
 
 
-# Read Image and Convert to Binary
-
 img = cv2.imread("Image5.png", 0)
 
 _, binary = cv2.threshold(img, 120, 255, cv2.THRESH_BINARY)
 
-# Invert if background is white (optional)
+# Invert if background is white
 # binary = cv2.bitwise_not(binary)
 
 
-# Skeletonization (Morphological Method)
+# Skeletonization
 
 skeleton = np.zeros(binary.shape, np.uint8)
 
@@ -31,7 +29,7 @@ while True:
         break
 
 
-# Pruning (Remove Small Branches)
+# Pruning
 
 # Find connected components
 num_labels, labels, stats, _ = cv2.connectedComponentsWithStats(skeleton, connectivity=8)
@@ -45,7 +43,6 @@ for i in range(1, num_labels):  # skip background
         pruned[labels == i] = 255
 
 
-# 4. Show Results
 
 cv2.imshow("Binary", img)
 cv2.imshow("Skeleton", skeleton)

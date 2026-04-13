@@ -8,7 +8,7 @@ img = cv2.imread('Image5.png', 0)
 
 
 
-# -------- ROBERTS --------
+#  ROBERTS 
 roberts_x = np.array([[1, 0],
                       [0, -1]], dtype=np.float32)
 
@@ -20,7 +20,7 @@ ry = cv2.filter2D(img, -1, roberts_y)
 roberts = cv2.magnitude(rx.astype(np.float32), ry.astype(np.float32))
 
 
-# -------- PREWITT --------
+#  PREWITT 
 prewitt_x = np.array([[-1,0,1],
                       [-1,0,1],
                       [-1,0,1]], dtype=np.float32)
@@ -34,7 +34,7 @@ py = cv2.filter2D(img, -1, prewitt_y)
 prewitt = cv2.magnitude(px.astype(np.float32), py.astype(np.float32))
 
 
-# -------- SOBEL --------
+#  SOBEL 
 sobelx = cv2.Sobel(img, cv2.CV_64F, 1, 0, ksize=3)
 sobely = cv2.Sobel(img, cv2.CV_64F, 0, 1, ksize=3)
 sobel = cv2.magnitude(sobelx, sobely)
