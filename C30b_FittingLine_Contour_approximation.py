@@ -4,20 +4,13 @@
 import cv2
 import numpy as np
 
-# -----------------------------
-# 1. Read Image
-# -----------------------------
 img = cv2.imread("Image5.png")
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
-# -----------------------------
-# 2. Convert to Binary
-# -----------------------------
+
 _, thresh = cv2.threshold(gray, 120, 255, cv2.THRESH_BINARY)
 
-# -----------------------------
-# 3. Find Contours
-# -----------------------------
+
 contours, _ = cv2.findContours(thresh,
                                cv2.RETR_EXTERNAL,
                                cv2.CHAIN_APPROX_NONE)
@@ -58,9 +51,7 @@ for contour in contours:
                     cv2.FONT_HERSHEY_SIMPLEX,
                     0.5, (255, 255, 255), 2)
 
-# -----------------------------
-# 5. Show Output
-# -----------------------------
+
 cv2.imshow("Polygon Approximation", img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()

@@ -1,3 +1,4 @@
+
 import cv2
 import matplotlib.pyplot as plt
 
@@ -12,9 +13,11 @@ left_crop = img[:, :int(0.75 * w)]
 
 right_crop = img[:, int(0.25 * w):]
 
+#NOTE: OpenCV uses BGR format, but Matplotlib uses RGB, so we need to convert before displaying
 img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 left_rgb = cv2.cvtColor(left_crop, cv2.COLOR_BGR2RGB)
 right_rgb = cv2.cvtColor(right_crop, cv2.COLOR_BGR2RGB)
+
 
 plt.figure(figsize=(10,4))
 

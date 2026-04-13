@@ -2,7 +2,7 @@
 
 
 # NOT WORKING CORRECTLY.  JUST FOR MATHEMATICAL IDEA
-# Detects only one shape starting from top right I GUESS??
+# Detects only one shape starting from top right
 
 
 

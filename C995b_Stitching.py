@@ -66,6 +66,7 @@ result_rgb = cv2.cvtColor(cropped_result, cv2.COLOR_BGR2RGB)
 
 plt.figure(figsize=(20,10))
 
+#NOTE: OpenCV uses BGR format, but Matplotlib uses RGB, so we need to convert before displaying
 img1_rgb = cv2.cvtColor(img1, cv2.COLOR_BGR2RGB)
 img2_rgb = cv2.cvtColor(img2, cv2.COLOR_BGR2RGB)
 

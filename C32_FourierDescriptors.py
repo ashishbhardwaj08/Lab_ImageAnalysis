@@ -1,4 +1,4 @@
-# WHAT THIS CODE DOES
+
 
 # Converts boundary to frequency domain
 # Keeps only 20 descriptors
@@ -9,12 +9,10 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-# -------------------------------
-# MAIN
-# -------------------------------
+
 if __name__ == "__main__":
     
-    # Read image
+   
     img = cv2.imread("Image5.png")
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     
@@ -46,7 +44,7 @@ if __name__ == "__main__":
     x_rec = reconstructed.real
     y_rec = reconstructed.imag
     
-    # Plot
+   
     plt.figure()
     plt.imshow(binary, cmap='gray')
     plt.plot(points[:,0], points[:,1], 'r.', label="Original")

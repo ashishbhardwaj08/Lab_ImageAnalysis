@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 # Load image
-img = cv2.imread("Dazai2.jpg")
+img = cv2.imread("Stitch1.jpeg")
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
 # Dummy function (required for trackbars)
