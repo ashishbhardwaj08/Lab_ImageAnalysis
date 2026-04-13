@@ -1,4 +1,3 @@
-#Cant understand yet
 
 
 import cv2

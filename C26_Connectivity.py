@@ -1,10 +1,9 @@
 import cv2
 import numpy as np
 
-# Read binary image
+
 img = cv2.imread("Image5.png", 0)
 
-# Threshold to ensure binary
 _, binary = cv2.threshold(img, 120, 255, cv2.THRESH_BINARY)
 
 # Connected components

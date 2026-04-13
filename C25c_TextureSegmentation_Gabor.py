@@ -1,6 +1,3 @@
-#Cant understand yet
-
-
 
 import cv2
 import numpy as np

@@ -1,10 +1,8 @@
 import cv2
 import matplotlib.pyplot as plt
 
-# Read image
 img = cv2.imread("Image.jpg", 0)
 
-# Apply Canny
 edges = cv2.Canny(img, 100, 200)
 
 # plt.figure(figsize=(8,4))

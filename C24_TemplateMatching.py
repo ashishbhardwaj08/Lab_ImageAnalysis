@@ -6,14 +6,13 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Read image and template
 img = cv2.imread("Image.jpg")
 template = cv2.imread("Template.jpg")
 
 img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 template_gray = cv2.cvtColor(template, cv2.COLOR_BGR2GRAY)
 
-# Template matching
+
 result = cv2.matchTemplate(img_gray, 
                            template_gray, 
                            cv2.TM_CCOEFF_NORMED)
@@ -32,7 +31,7 @@ cv2.rectangle(matched, top_left, bottom_right, (255,0,0), 4)
 
 cv2.imshow("Template",matched)
 
-# Display
+
 plt.figure(figsize=(12,4))
 
 plt.subplot(1,4,1)

@@ -30,7 +30,6 @@ lap_8 = cv2.filter2D(img, cv2.CV_64F, kernel_8)
 lap_8 = np.uint8(np.absolute(lap_8))
 
 
-# -------- Display --------
 plt.figure(figsize=(12,5))
 
 plt.subplot(1,4,1)

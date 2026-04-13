@@ -27,7 +27,7 @@ for i in range(1, rows-1):
             if np.any(patch > 0):
                 zero_cross[i,j] = 255
 
-# Display results
+
 plt.figure(figsize=(12,4))
 
 plt.subplot(1,3,1)

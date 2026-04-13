@@ -54,7 +54,7 @@ robinson_edge = np.uint8(np.clip(robinson_edge, 0, 255))
 
 
 
-# DISPLAY OUTPUTS
+
 
 
 plt.figure(figsize=(12,5))
