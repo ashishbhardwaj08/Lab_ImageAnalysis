@@ -46,7 +46,7 @@ cv2.circle(draw_img, (320, 213), 145, (255,255,0), 4)
 cv2.putText(draw_img, "OpenCV", (50,50),
             cv2.FONT_HERSHEY_SIMPLEX, 1, (255,255,255), 2)
 
-
+cv2.imshow("Drawn", draw_img)
 
 kernel = np.array([[0,-1,0],[-1,5,-1],[0,-1,0]])
 sharpen = cv2.filter2D(img, -1, kernel)

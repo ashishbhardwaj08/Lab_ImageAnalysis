@@ -103,6 +103,7 @@ img2 = cv2.imread("Image2.jpg")
 img2 = cv2.resize(img2, (img.shape[1], img.shape[0]))
 blend = cv2.addWeighted(img, 0.7, img2, 0.3, 0)
 
+
 # Template matching
 template = cv2.imread("template.jpg", 0)
 res = cv2.matchTemplate(gray, template, cv2.TM_CCOEFF_NORMED)
@@ -130,7 +131,7 @@ warp = cv2.warpAffine(img, M_aff, (img.shape[1], img.shape[0]))
 roi = img[100:300, 200:400]
 
 # lay key results
-cv2.imshow("imgout", opening)
+cv2.imshow("imgout", blend)
 
 
 cv2.waitKey(0)

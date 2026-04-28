@@ -15,8 +15,8 @@ import matplotlib.pyplot as plt
 # cv2.imwrite("left_75.jpg", left_crop)
 # cv2.imwrite("right_75.jpg", right_crop)
 
-img1 = cv2.imread("left_75.jpg")
-img2 = cv2.imread("right_75.jpg")
+img1 = cv2.imread("Stitchtest (4).jpg")
+img2 = cv2.imread("Stitchtest (5).jpg")
 
 gray1 = cv2.cvtColor(img1, cv2.COLOR_BGR2GRAY)
 gray2 = cv2.cvtColor(img2, cv2.COLOR_BGR2GRAY)
