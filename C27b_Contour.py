@@ -1,26 +1,26 @@
-
-
-
 # NOT WORKING CORRECTLY.  JUST FOR MATHEMATICAL IDEA
 # Detects only one shape starting from top right
 
 
-
-
-
 import cv2
 import numpy as np
+
 
 # -----------------------------
 # Neighbor definition (8-connected)
 # -----------------------------
 def get_neighbors(x, y):
     return [
-        (x-1,y-1),(x-1,y),(x-1,y+1),
-        (x,y+1),
-        (x+1,y+1),(x+1,y),(x+1,y-1),
-        (x,y-1)
+        (x - 1, y - 1),
+        (x - 1, y),
+        (x - 1, y + 1),
+        (x, y + 1),
+        (x + 1, y + 1),
+        (x + 1, y),
+        (x + 1, y - 1),
+        (x, y - 1),
     ]
+
 
 # -----------------------------
 # Contour following function
@@ -57,6 +57,7 @@ def contour_follow(binary, start):
 
     return contour
 
+
 # -----------------------------
 # Main Program
 # -----------------------------
@@ -90,7 +91,7 @@ contour = contour_follow(binary, start)
 # -----------------------------
 output = img.copy()
 
-for (x, y) in contour:
+for x, y in contour:
     cv2.circle(output, (y, x), 1, (0, 0, 255), -1)
 
 # -----------------------------

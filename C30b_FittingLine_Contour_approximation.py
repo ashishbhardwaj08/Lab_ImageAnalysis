@@ -1,4 +1,4 @@
-#This also uses RDP internally
+# This also uses RDP internally
 
 
 import cv2
@@ -9,9 +9,7 @@ gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
 _, thresh = cv2.threshold(gray, 120, 255, cv2.THRESH_BINARY)
 
-contours, _ = cv2.findContours(thresh,
-                               cv2.RETR_EXTERNAL,
-                               cv2.CHAIN_APPROX_NONE)
+contours, _ = cv2.findContours(thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
 
 # Loop through each contour
 for contour in contours:
@@ -45,9 +43,9 @@ for contour in contours:
     if M["m00"] != 0:
         cx = int(M["m10"] / M["m00"])
         cy = int(M["m01"] / M["m00"])
-        cv2.putText(img, shape, (cx - 40, cy),
-                    cv2.FONT_HERSHEY_SIMPLEX,
-                    0.5, (255, 255, 255), 2)
+        cv2.putText(
+            img, shape, (cx - 40, cy), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2
+        )
 
 
 cv2.imshow("Polygon Approximation", img)
