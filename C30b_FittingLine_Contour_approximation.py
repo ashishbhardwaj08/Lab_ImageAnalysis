@@ -7,9 +7,7 @@ import numpy as np
 img = cv2.imread("Image5.png")
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
-
 _, thresh = cv2.threshold(gray, 120, 255, cv2.THRESH_BINARY)
-
 
 contours, _ = cv2.findContours(thresh,
                                cv2.RETR_EXTERNAL,

@@ -36,7 +36,7 @@ while True:
     # -------- Pen Drawing --------
     edges = cv2.Canny(gray, canny_min, canny_max)
     pen = 255 - edges
-    # Show outputs
+   
     # cv2.imshow("Original", img)
     cv2.imshow("Sketch", sketch)
     cv2.imshow("Pen Drawing", pen)
